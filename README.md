@@ -1,7 +1,7 @@
-#sol-orbits
+# sol-orbits
 
 Generates plots illustrating the relative orbits for several solar-observing spacecraft missions.
 
-Requires HelioPy and SpiceyPy.
+Requires astrospice.
 
 ![sol-orbits](sol-orbits.png)
