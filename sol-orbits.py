@@ -84,31 +84,33 @@ tight_layout()
 savefig('sol-orbits.pdf')
 savefig('sol-orbits.png')
 
+# TODO - Sort out the plot below once coordinate transformations have been completed
+
 # Plot some orbit quantities
-fig, axs = plt.subplots(3, 1, sharex=True)
-axs[0].plot(earth.times, earth.r, 'k', label='Earth')
-axs[0].plot(psp.times, psp.r, label='PSP')
-axs[0].plot(solo.times, solo.r, label='SolO')
-axs[0].plot(sta.times, sta.r, label='STA')
-axs[0].set_ylim(0, 1.1)
-axs[0].set_ylabel('r (AU)')
-axs[0].legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
-           ncol=4, mode="expand", borderaxespad=0.)
+#fig, axs = plt.subplots(3, 1, sharex=True)
+##axs[0].plot(earth.times, earth.r, 'k', label='Earth')
+#axs[0].plot(times, c_psp.r, label='PSP')
+#axs[0].plot(solo.times, solo.r, label='SolO')
+#axs[0].plot(sta.times, sta.r, label='STA')
+#axs[0].set_ylim(0, 1.1)
+#axs[0].set_ylabel('r (AU)')
+#axs[0].legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
+#           ncol=4, mode="expand", borderaxespad=0.)
 
-axs[1].plot(earth.times, np.rad2deg(np.arcsin(earth.z / earth.r)), 'k')
-axs[1].plot(psp.times, np.rad2deg(np.arcsin(psp.z / psp.r)))
-axs[1].plot(solo.times, np.rad2deg(np.arcsin(solo.z / solo.r)))
-axs[1].plot(sta.times, np.rad2deg(np.arcsin(sta.z / sta.r)))
-axs[1].set_ylabel('Elevation (deg)')
+##axs[1].plot(earth.times, np.rad2deg(np.arcsin(earth.z / earth.r)), 'k')
+#axs[1].plot(psp.times, np.rad2deg(np.arcsin(psp.z / psp.r)))
+#axs[1].plot(solo.times, np.rad2deg(np.arcsin(solo.z / solo.r)))
+#axs[1].plot(sta.times, np.rad2deg(np.arcsin(sta.z / sta.r)))
+#axs[1].set_ylabel('Elevation (deg)')
 
-axs[2].plot(earth.times, earth.speed, 'k')
-axs[2].plot(psp.times, psp.speed)
-axs[2].plot(solo.times, solo.speed)
-axs[2].plot(sta.times, sta.speed)
-axs[2].set_ylabel('Speed (km/s)')
+##axs[2].plot(earth.times, earth.speed, 'k')
+#axs[2].plot(psp.times, psp.speed)
+#axs[2].plot(solo.times, solo.speed)
+#axs[2].plot(sta.times, sta.speed)
+#axs[2].set_ylabel('Speed (km/s)')
 
-fig.autofmt_xdate()
+#fig.autofmt_xdate()
 
-tight_layout()
+#tight_layout()
 
-savefig('sol-orbits-param.pdf')
+#savefig('sol-orbits-param.pdf')
